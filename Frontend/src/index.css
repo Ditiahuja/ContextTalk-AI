@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+    --bg: #F8F8F5;
+    --card: #FFFFFF;
+    --border: #ECEAE0;
+    --primary: #708238;
+    --text: #202020;
+    --subtext: #6B7280;
+}
+
+/* Dark Theme */
+.dark {
+    --bg: #0D1117;
+    --card: #161B22;
+    --border: #30363D;
+    --primary: #8BAE5A;
+    --text: #F3F4F6;
+    --subtext: #9CA3AF;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #f3f4ef;
+    border-radius: 999px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #556B2F;
+    border-radius: 999px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #445625;
+  }
