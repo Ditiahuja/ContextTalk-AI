@@ -1,31 +1,35 @@
-fastapi==0.139.0
-uvicorn[standard]==0.35.0
+fastapi
+uvicorn[standard]
 
-python-dotenv==1.2.2
-python-multipart==0.0.20
+python-dotenv
+python-multipart
 
-pydantic==2.13.4
-email-validator==2.3.0
+pydantic
+email-validator
 
-sqlalchemy==2.0.51
-passlib[bcrypt]==1.7.4
-python-jose[cryptography]==3.5.0
+sqlalchemy
+passlib[bcrypt]
+python-jose[cryptography]
 
-langchain==0.3.27
-langchain-core==0.3.74
-langchain-community==0.3.27
-langchain-chroma==0.2.5
-langchain-huggingface==0.3.1
-langchain-groq==0.3.8
+langchain
+langchain-core
+langchain-community
+langchain-chroma
+langchain-huggingface
+langchain-groq
 
-chromadb==1.0.20
+chromadb
 
-sentence-transformers==5.1.0
-huggingface-hub==0.34.4
+sentence-transformers
+huggingface-hub
 
-pypdf==6.0.0
+pypdf
+docx2txt
 
-groq==0.31.0
+easyocr
+pillow
 
-numpy==2.2.6
-requests==2.32.5
+numpy
+requests
+
+groq
