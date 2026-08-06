@@ -146,12 +146,12 @@ export default function Home() {
 
   return (
     <div
-      className="h-screen p-3 overflow-hidden transition-colors duration-300"
+      className="h-screen p-2 md:p-3 overflow-hidden transition-colors duration-300"
       style={{
         background: "var(--bg)",
       }}
     >
-      <div className="flex h-full gap-5">
+      <div className="flex h-full flex-col lg:flex-row gap-2 md:gap-5">
         <Sidebar
           onUpload={handleUpload}
           documentInfo={documentInfo}
@@ -162,7 +162,7 @@ export default function Home() {
         />
 
         <div
-          className="flex flex-1 flex-col overflow-hidden rounded-[30px] border shadow-sm transition-colors duration-300"
+         className="flex flex-1 flex-col overflow-hidden rounded-2xl md:rounded-[30px] border shadow-sm transition-colors duration-300"
           style={{
             background: "var(--card)",
             borderColor: "var(--border)",
@@ -170,7 +170,7 @@ export default function Home() {
         >
           <Header />
 
-          <div className="flex-1 overflow-y-auto p-8">
+          <div className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">
             {messages.length === 0 ? (
               <WelcomeCard
                 documentInfo={documentInfo}
@@ -190,7 +190,7 @@ export default function Home() {
                     {/* Sender */}
 
                     <span
-                      className="m1-3 text-[13px] font-semibold"
+                      className="mb-2 text-xs md:text-[13px] font-semibold"
                       style={{
                         color:
                           msg.role === "user"
@@ -204,7 +204,7 @@ export default function Home() {
                     {/* Bubble */}
 
                     <div
-                      className="max-w-[65%] rounded-2xl px-5 py-4 text-[13px] leading-7 shadow-sm transition-colors duration-300"
+                      className="max-w-[90%] sm:max-w-[80%] lg:max-w-[65%] rounded-2xl px-4 md:px-5 py-3 md:py-4 text-xs md:text-[13px] leading-6 md:leading-7 shadow-sm transition-colors duration-300"
                       style={
                         msg.role === "user"
                           ? {

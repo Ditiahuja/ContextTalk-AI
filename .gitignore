@@ -1,22 +1,35 @@
+# ------------------------
 # Python
+# ------------------------
 venv/
 .venv/
 __pycache__/
 *.pyc
+*.db
 
+# ------------------------
 # React
+# ------------------------
 Frontend/node_modules/
 Frontend/dist/
 
-# Environment
+# ------------------------
+# Backend
+# ------------------------
 Backend/.env
-
-# Backend storage
 Backend/uploads/
 Backend/database/
+Backend/node_modules/
+Backend/storage/
+Backend/data/
 
+
+# ------------------------
 # VS Code
+# ------------------------
 .vscode/
 
+# ------------------------
 # OS
+# ------------------------
 .DS_Store

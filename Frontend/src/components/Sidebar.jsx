@@ -12,7 +12,7 @@ function Sidebar({
 }) {
   return (
     <aside
-      className="w-75 h-full rounded-[28px] border shadow-sm p-5 flex flex-col transition-colors duration-300"
+      className="w-full lg:w-80 lg:h-full rounded-[28px] border shadow-sm p-4 lg:p-5 flex flex-col transition-colors duration-300"
       style={{
         background: "var(--card)",
         borderColor: "var(--border)",
@@ -34,14 +34,14 @@ function Sidebar({
 
         <div>
           <h1
-            className="text-[22px] font-semibold tracking-tight transition-colors duration-300"
+          className="text-xl lg:text-[22px] font-semibold tracking-tight"
             style={{ color: "var(--text)" }}
           >
             ContextTalk AI
           </h1>
 
           <p
-            className="mt-1 text-[14px] leading-6 transition-colors duration-300"
+            className="mt-1 text-sm leading-6"
             style={{ color: "var(--subtext)" }}
           >
             Intelligent conversations

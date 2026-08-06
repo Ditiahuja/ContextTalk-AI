@@ -25,47 +25,44 @@ function UploadCard({ onUpload, uploadMode }) {
 
   return (
     <div
-      className="rounded-3xl p-3 shadow-sm border transition-colors duration-300"
+      className="rounded-3xl p-4 lg:p-5 shadow-sm border transition-colors duration-300"
       style={{
         background: "var(--card)",
         borderColor: "var(--border)",
       }}
     >
       <h2
-        className="text-[17px] font-semibold mb-4 transition-colors duration-300"
+        className="text-base lg:text-[17px] font-semibold mb-4"
         style={{ color: "var(--text)" }}
       >
         Upload Document
       </h2>
 
       <div
-        className="border-2 border-dashed rounded-3xl h-60 flex flex-col justify-center items-center text-center px-5 transition-colors duration-300"
+        className="border-2 border-dashed rounded-3xl min-h-55 lg:h-60 flex flex-col justify-center items-center text-center px-4 lg:px-5"
         style={{
           borderColor: "var(--border)",
           background: "var(--bg)",
         }}
       >
         <div
-          className="w-20 h-10 rounded-full flex items-center justify-center mb-5"
+          className="w-16 h-12 rounded-3xl flex items-center justify-center mb-4"
           style={{
-            background: "rgba(112,130,56,0.15)",
+            background: "rgba(112,130,56,0.12)",
           }}
         >
-          <UploadCloud
-            size={30}
-            style={{ color: "var(--primary)" }}
-          />
+          <UploadCloud size={22} style={{ color: "var(--primary)" }} />
         </div>
 
         <h3
-          className="text-[13px] font-medium transition-colors duration-300"
+          className="text-sm font-medium transition-colors duration-300"
           style={{ color: "var(--text)" }}
         >
           Drag & Drop your PDF
         </h3>
 
         <p
-          className="text-[13px] mt-1 transition-colors duration-300"
+          className="text-xs lg:text-sm  mt-1 transition-colors duration-300"
           style={{ color: "var(--subtext)" }}
         >
           or upload it manually
@@ -73,7 +70,7 @@ function UploadCard({ onUpload, uploadMode }) {
 
         <button
           onClick={handleChooseFile}
-          className="mt-5 rounded-xl px-8 py-3 text-[12px] font-medium text-white transition-all duration-300 hover:scale-105"
+          className="mt-5 w-full max-w-xs rounded-xl px-6 py-3 text-sm font-medium text-white transition-all duration-300 hover:scale-105"
           style={{
             background: "var(--primary)",
           }}
@@ -82,7 +79,7 @@ function UploadCard({ onUpload, uploadMode }) {
         </button>
 
         <p
-          className="mt-5 text-[12px] transition-colors duration-300"
+          className="mt-4 text-xs text-center px-2 transition-colors duration-300"
           style={{ color: "var(--subtext)" }}
         >
           Supports PDF, DOCX, PNG, JPG, JPEG

@@ -92,13 +92,13 @@ function ChatInput({ onSend }) {
 
   return (
     <div
-      className="border-t px-6 py-3 transition-colors duration-300"
+      className="border-t px-3 sm:px-4 lg:px-6 py-3 transition-colors duration-300"
       style={{
         borderColor: "var(--border)",
       }}
     >
       <div
-        className="flex items-center gap-4 rounded-full border px-4 h-12 shadow-sm transition-colors duration-300"
+        className="flex items-center gap-2 sm:gap-3 lg:gap-4 rounded-2xl lg:rounded-full border px-3 sm:px-4 h-12 lg:h-13 shadow-sm transition-colors duration-300"
         style={{
           background: "var(--card)",
           borderColor: "var(--border)",
@@ -107,7 +107,8 @@ function ChatInput({ onSend }) {
         {/* Attachment */}
 
         <Paperclip
-          size={20}
+          size={18}
+          className="shrink-0"
           style={{
             color: "var(--primary)",
             cursor: "pointer",
@@ -128,7 +129,7 @@ function ChatInput({ onSend }) {
               ? "Listening..."
               : "Ask something about your document..."
           }
-          className="flex-1 bg-transparent outline-none text-[13px]"
+          className="flex-1 min-w-0 bg-transparent outline-none text-sm placeholder:text-xs sm:placeholder:text-sm"
           style={{
             color: "var(--text)",
           }}
@@ -138,7 +139,7 @@ function ChatInput({ onSend }) {
 
         <button
           onClick={handleMic}
-          className="rounded-full p-2 transition-all duration-300"
+          className="rounded-full p-2 shrink-0 transition-all duration-300"
           style={{
             background: isListening ? "#FEE2E2" : "transparent",
             color: isListening ? "#DC2626" : "var(--primary)",
@@ -154,17 +155,17 @@ function ChatInput({ onSend }) {
 
         <button
           onClick={handleSend}
-          className="flex h-8 w-8 items-center justify-center rounded-full text-white transition-all duration-300 hover:scale-110"
+          className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full text-white shrink-0 transition-all duration-300 hover:scale-110"
           style={{
             background: "var(--primary)",
           }}
         >
-          <SendHorizontal size={16} />
+          <SendHorizontal size={18} />
         </button>
       </div>
 
       {isListening && (
-        <p className="mt-2 text-center text-[12px] text-red-500 animate-pulse">
+        <p className="mt-2 text-center text-xs text-red-500 animate-pulse">
           🎙️ Listening...
         </p>
       )}
