@@ -10,11 +10,13 @@ from sqlalchemy.orm import Session
 from auth.database import get_db
 from auth.models import User
 
+import os
+
 # -----------------------------
 # JWT Configuration
 # -----------------------------
 
-SECRET_KEY = "your_super_secret_key_change_this_in_production"
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 ALGORITHM = "HS256"
 
